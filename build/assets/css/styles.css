@@ -4,6 +4,7 @@ li,
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
   padding: 0; }
@@ -231,7 +232,6 @@ html {
   clear: both; }
 
 .about {
-  z-index: 2;
   color: #fff;
   padding: 40px 60px; }
 
@@ -324,4 +324,19 @@ html {
             height: 100%; }
 
 .inovative {
-  padding: 60px 5px; }
+  padding: 60px 5px;
+  color: #fff; }
+  .inovative .desktop-icon i {
+    font-size: 64px;
+    margin-bottom: 10px; }
+  .inovative h4 {
+    font-size: 34pt;
+    font-family: "Montserrat-Regular";
+    letter-spacing: 0.5px; }
+  .inovative p {
+    max-width: 320px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.7px; }

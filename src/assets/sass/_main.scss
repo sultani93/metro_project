@@ -171,7 +171,7 @@ html {
 }
 
 .about {
-  z-index: 2;
+  // z-index: 2;
   color: $white;
   padding: 40px 60px;
 }
@@ -263,5 +263,22 @@ html {
 }
 .inovative {
   padding: 60px 5px;
-  // box-shadow: rgba(23, 36, 52, 0) 5px 5px 2px 0px;
+  color: $white;
+  .desktop-icon i {
+    font-size: 64px;
+    margin-bottom: 10px;
+  }
+  h4 {
+    font-size: 34pt;
+    font-family: $regular;
+    letter-spacing: 0.5px;
+  }
+  p {
+    max-width: 320px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.7px;
+  }
 }

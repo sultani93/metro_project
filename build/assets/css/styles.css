@@ -1,7 +1,12 @@
 /* reset starts */
 ul,
-li {
-  margin: 0 !important; }
+li,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0; }
 
 a {
   text-decoration: none; }
@@ -267,11 +272,52 @@ html {
     color: #464646;
     background: #efefef; }
     .team-wrapper .team-info h3 {
-      font-size: 18pt; }
+      font-size: 24px;
+      font-family: "Montserrat-Regular";
+      color: #464646; }
+    .team-wrapper .team-info p {
+      font-weight: 300;
+      font-size: 10pt;
+      margin-bottom: 10px; }
     .team-wrapper .team-info .devider-team {
       display: block;
-      border-top: 3px solid #999;
+      border-top: 3px solid #464646;
       width: 30%;
       margin-top: 10px;
       margin-bottom: 10px;
       text-align: left; }
+    .team-wrapper .team-info .about-team {
+      font-size: 13px;
+      line-height: 23px; }
+    .team-wrapper .team-info .team-social {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .team-wrapper .team-info .team-social li {
+        margin: 20px 15px 10px 0; }
+        .team-wrapper .team-info .team-social li a {
+          padding: 8px;
+          width: 28px;
+          height: 28px;
+          display: -webkit-inline-box;
+          display: -webkit-inline-flex;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          color: #464646; }
+          .team-wrapper .team-info .team-social li a i {
+            margin-bottom: 10px;
+            width: 100%;
+            height: 100%; }

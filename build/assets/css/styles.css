@@ -471,3 +471,19 @@ html {
 
 .mtb-60 {
   margin: 60px 0; }
+
+.project-carousel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .project-carousel .real {
+    width: 100%; }
+    .project-carousel .real img {
+      width: 87px;
+      height: 87px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      margin: 0 auto; }
+  .project-carousel :is(.owl-nav, .owl-dots).disabled {
+    display: none; }

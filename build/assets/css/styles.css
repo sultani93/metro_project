@@ -727,6 +727,7 @@ body {
   padding: 5px 18px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  outline: none;
   margin-top: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 3px 8px 12px;
   box-shadow: rgba(0, 0, 0, 0.3) 3px 8px 12px;
@@ -737,3 +738,5 @@ body {
   .sent-now:hover {
     -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; }
+  .sent-now:focus {
+    outline: none; }

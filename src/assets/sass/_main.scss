@@ -660,11 +660,15 @@ body {
   background: $orange;
   padding: 5px 18px;
   border-radius: 5px;
+  outline: none;
   margin-top: 15px;
   box-shadow: rgba(0, 0, 0, 0.3) 3px 8px 12px;
   cursor: pointer;
   transition: all 0.1s ease;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  }
+  &:focus {
+    outline: none;
   }
 }

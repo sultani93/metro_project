@@ -648,3 +648,92 @@ body {
   font-size: 13px;
   letter-spacing: 0.7px;
   line-height: 23px; }
+
+#map {
+  height: 400px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px; }
+
+.contact-info {
+  color: #464646;
+  background: #fff;
+  height: 400px;
+  padding: 25px 20px 25px 40px;
+  line-height: 26pt;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
+  font-size: 13px; }
+  .contact-info .contact-title {
+    text-transform: uppercase;
+    font-family: "Montserrat-SemiBold"; }
+  .contact-info .personal-info {
+    line-height: 20px; }
+
+.tel-num {
+  color: #464646; }
+
+.contact {
+  margin-top: 60px; }
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0px;
+    border: 0px;
+    font-size: 9pt;
+    color: #fff;
+    background: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .contact input::-webkit-input-placeholder,
+    .contact textarea::-webkit-input-placeholder {
+      color: #fff; }
+    .contact input::-ms-input-placeholder,
+    .contact textarea::-ms-input-placeholder {
+      color: #fff; }
+    .contact input::placeholder,
+    .contact textarea::placeholder {
+      color: #fff; }
+    .contact input:focus,
+    .contact textarea:focus {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+    .contact input:focus-visible,
+    .contact textarea:focus-visible {
+      border: 1px solid rgba(255, 255, 255, 0.8); }
+  .contact textarea {
+    height: 100px; }
+
+.form-control:focus {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff; }
+
+.sent-now {
+  display: block;
+  width: 180px;
+  font-size: 10pt;
+  line-height: 38px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: #ff6600;
+  padding: 5px 18px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 3px 8px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 8px 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease; }
+  .sent-now:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; }

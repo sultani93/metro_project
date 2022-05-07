@@ -13,6 +13,8 @@ ol {
 
 a {
   text-decoration: none !important; }
+  a:hover {
+    color: #fff; }
 
 li {
   list-style: none; }
@@ -45,10 +47,10 @@ li {
 html {
   scroll-behavior: smooth; }
 
-.navbar-menu, .pagination-sm .page-item, .page-btn a, .tag-list li a {
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+.navbar-menu, .nav-list li, .nav-list li .nav-link, .nav-hidden li a, .social-list a, .social-list a::after, .team-wrapper .team-info .team-social li a, .project-img a, .services-list li, .widget .download-brochure .download-link, .pagination-sm .page-item, .page-btn a, .tag-list li a {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 body {
   font-family: "Montserrat-Regular"; }
@@ -90,7 +92,13 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 80px; }
+  height: 80px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease; }
+
+.scrolled {
+  background-color: #111111; }
 
 .nav-list {
   display: -webkit-box;
@@ -109,6 +117,16 @@ body {
     display: inline-block;
     margin: 0 15px 0 15px;
     z-index: 10; }
+    .nav-list li:hover > ul {
+      visibility: visible;
+      -webkit-animation-name: animfadeInUpmenu;
+      animation-name: animfadeInUpmenu;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      opacity: 1;
+      pointer-events: all; }
     .nav-list li .nav-link {
       display: inline-block;
       padding: 10px 20px 10px 10px;
@@ -119,6 +137,42 @@ body {
       letter-spacing: 1px;
       line-height: 60px;
       z-index: 10; }
+      .nav-list li .nav-link:hover {
+        color: #999; }
+
+.nav-hidden {
+  position: absolute;
+  top: 75px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0; }
+  .nav-hidden li {
+    width: 230px;
+    background: #111111;
+    margin: 0;
+    margin-left: -5px;
+    border-bottom: 1px groove rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    cursor: pointer; }
+    .nav-hidden li a {
+      font-size: 8pt;
+      line-height: 20px;
+      padding-left: 17px;
+      color: #efefef;
+      font-family: "Montserrat-SemiBold";
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+    .nav-hidden li:hover > a {
+      color: #999; }
 
 .actived {
   color: #999 !important; }
@@ -214,12 +268,33 @@ body {
     display: inline-block;
     font-size: 10px;
     letter-spacing: 0.2em;
-    margin-right: 5px;
-    padding: 5px 10px 5px 15px;
+    margin: 0 15px;
+    padding: 5px 0;
     cursor: pointer;
-    color: #e5e5e5;
+    color: #efefef;
     font-family: "Montserrat-Regular";
-    line-height: 23px; }
+    line-height: 23px;
+    position: relative; }
+    .social-list a:hover {
+      color: #fff; }
+    .social-list a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      left: 0;
+      bottom: 4px;
+      -webkit-transform: scale(0, 1);
+      -ms-transform: scale(0, 1);
+      transform: scale(0, 1);
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      transform-origin: 0% 100%; }
+    .social-list a:hover::after {
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1); }
 
 .footer-text {
   font-family: "Montserrat-Regular";
@@ -230,10 +305,10 @@ body {
   line-height: 23px; }
 
 .space-double {
-  width: 100%;
-  height: 80px;
-  display: block;
-  clear: both; }
+  height: 80px; }
+
+.space-single {
+  height: 40px; }
 
 .about {
   color: #fff;
@@ -283,7 +358,8 @@ body {
     .team-wrapper .team-info p {
       font-weight: 300;
       font-size: 10pt;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      color: #464646; }
     .team-wrapper .team-info .devider-team {
       display: block;
       border-top: 3px solid #464646;
@@ -293,7 +369,8 @@ body {
       text-align: left; }
     .team-wrapper .team-info .about-team {
       font-size: 13px;
-      line-height: 23px; }
+      line-height: 23px;
+      color: #464646; }
     .team-wrapper .team-info .team-social {
       display: -webkit-box;
       display: -webkit-flex;
@@ -304,15 +381,19 @@ body {
       -ms-flex-align: center;
       align-items: center; }
       .team-wrapper .team-info .team-social li {
-        margin: 20px 15px 10px 0; }
+        margin: 20px 15px 10px 0;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
         .team-wrapper .team-info .team-social li a {
           padding: 8px;
           width: 28px;
           height: 28px;
-          display: -webkit-inline-box;
-          display: -webkit-inline-flex;
-          display: -ms-inline-flexbox;
-          display: inline-flex;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
           -webkit-box-pack: center;
           -webkit-justify-content: center;
           -ms-flex-pack: center;
@@ -322,10 +403,14 @@ body {
           -ms-flex-align: center;
           align-items: center;
           color: #464646; }
+          .team-wrapper .team-info .team-social li a:hover {
+            background-color: #ff6600;
+            color: #fff; }
           .team-wrapper .team-info .team-social li a i {
-            margin-bottom: 10px;
             width: 100%;
-            height: 100%; }
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover; }
 
 .inovative {
   padding: 60px 5px;
@@ -367,15 +452,47 @@ body {
   padding: 60px 0 30px; }
 
 .project-img {
-  overflow-x: hidden; }
+  overflow: hidden; }
   .project-img a {
     width: 100%;
-    height: 700px; }
+    height: 450px;
+    position: relative;
+    display: block;
+    text-align: center; }
+    .project-img a:hover img {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
     .project-img a img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
-      object-fit: cover; }
+      object-fit: cover;
+      -webkit-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out; }
+    .project-img a:hover .overlay {
+      opacity: 1;
+      height: 100%;
+      top: 0; }
+  .project-img .overlay {
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    opacity: 0;
+    top: -30px;
+    left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .project-img .overlay h3 {
+      text-transform: uppercase;
+      font-size: 9pt;
+      letter-spacing: 4px;
+      color: #333;
+      padding-top: 33%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8); }
 
 .col-gap {
   row-gap: 16px;
@@ -437,11 +554,14 @@ body {
     background: rgba(0, 0, 0, 0.3);
     cursor: pointer;
     border-bottom: 1px solid #444; }
+    .services-list li:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
     .services-list li a {
       display: inline-block;
       color: #efefef;
       padding: 15px 20px 15px 20px;
-      font-size: 13px; }
+      font-size: 13px;
+      line-height: 23px; }
   .services-list .active {
     background: rgba(0, 0, 0, 0.8);
     color: #fff; }
@@ -472,6 +592,9 @@ body {
       color: #fff;
       text-transform: uppercase;
       margin: 0 auto; }
+      .widget .download-brochure .download-link:hover {
+        color: #333;
+        background: #fff; }
 
 .mtb-60 {
   margin: 60px 0; }
@@ -740,3 +863,49 @@ body {
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; }
   .sent-now:focus {
     outline: none; }
+
+.success-date h4 {
+  font-size: 28pt; }
+
+.success-date span {
+  font-size: 13px;
+  line-height: 23px;
+  font-style: italic; }
+
+.success {
+  margin-bottom: 5px;
+  padding-bottom: 60px;
+  margin-left: -18px; }
+  .success:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 8px;
+    margin-left: 5px; }
+
+.success-text {
+  margin-left: 30px; }
+  .success-text h4 {
+    font-size: 14pt;
+    line-height: 24px;
+    margin-bottom: 10px; }
+  .success-text p {
+    line-height: 23px;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.7px; }
+
+.circle {
+  background: #ff6600;
+  width: 12px;
+  height: 12px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  float: left; }
+
+.success-last {
+  margin-bottom: 5px;
+  margin-left: -18px; }

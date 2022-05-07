@@ -13,6 +13,9 @@ ol {
 }
 a {
   text-decoration: none !important;
+  &:hover {
+    color: $white;
+  }
 }
 li {
   list-style: none;

@@ -121,10 +121,10 @@ body {
 }
 
 .bg-pic {
-  background-image: url(/assets/img/bg.jpg);
+  background-image: url(../img/bg.jpg);
 }
 .bg-pic-about {
-  background-image: url(/assets/img/bg2.jpg);
+  background-image: url(../img/bg2.jpg);
 }
 
 .bg-pic,
@@ -144,7 +144,7 @@ body {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: url(/assets/img/pattern.png);
+  background: url(../img/pattern.png);
 }
 
 .overlay-text {
@@ -512,7 +512,7 @@ body {
   position: relative;
   margin-bottom: 40px;
   height: 200px;
-  background: url(/assets/img/bg-widget.jpg);
+  background: url(../img/bg-widget.jpg);
   padding: 60px 15px 60px 15px;
   text-align: center;
   .download-brochure {

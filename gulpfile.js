@@ -29,6 +29,7 @@ gulp.task('bundleCss', () => {
       source + '/libs/components-bootstrap/css/bootstrap.min.css',
       source + '/libs/owl-carousel/owl.theme.default.min.css',
       source + '/libs/owl-carousel/owl.carousel.min.css',
+      source + '/libs/fancy-box/jquery.fancybox.min.css',
       // plugin`s css
     ])
     .pipe(cleanCSS()) //minify
@@ -63,6 +64,7 @@ gulp.task('bundleScript', function () {
       source + '/libs/components-bootstrap/js/popper.min.js',
       source + '/libs/components-bootstrap/js/bootstrap.min.js',
       source + '/libs/owl-carousel/owl.carousel.min.js',
+      source + '/libs/fancy-box/jquery.fancybox.min.js',
       // Plugin`s js here
     ])
     .pipe(uglify()) //minify

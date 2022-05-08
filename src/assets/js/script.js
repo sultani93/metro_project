@@ -39,3 +39,19 @@ window.onscroll = function () {
     navbar.classList.remove('scrolled')
   }
 }
+
+// $(function () {
+//   $('.page-pic-change').owlCarousel({
+//     nav: true,
+//     dots: false,
+//     loop: true,
+//     items: 1,
+//     slideSpeed: 1200,
+//     paginationSpeed: 1000,
+//     smartSpeed: 1200,
+//   })
+// })
+// FancyBox
+$('[data-fancybox]').fancybox({
+  buttons: ['zoom', 'fullScreen', 'close'],
+})

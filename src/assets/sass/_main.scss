@@ -126,9 +126,13 @@ body {
 .bg-pic-about {
   background-image: url(../img/bg2.jpg);
 }
+.bg-pic-projects {
+  background-image: url(../img/bg3.jpg);
+}
 
 .bg-pic,
-.bg-pic-about {
+.bg-pic-about,
+.bg-pic-projects {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -365,9 +369,11 @@ body {
   background-color: transparent;
   padding: 60px 8px 30px 0;
   margin-bottom: 0;
+
   a {
     color: $white;
     font-size: 14px;
+    @extend %transition;
   }
 }
 .breadcrumb-item + .breadcrumb-item::before {
@@ -376,12 +382,20 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.breadcrumb-item:not(:last-child):hover a {
+  color: $orange;
+}
 .all-work {
   color: $white;
   font-size: 14px;
   text-align: right;
   display: block;
   padding: 60px 0 30px;
+  @extend %transition;
+  &:hover {
+    color: $orange;
+  }
 }
 .project-img {
   overflow: hidden;
@@ -730,6 +744,10 @@ body {
 }
 .tel-num {
   color: $light-gray;
+  @extend %transition;
+  &:hover {
+    color: $orange;
+  }
 }
 
 .contact {
@@ -899,18 +917,18 @@ body {
     top: 40%;
   }
 }
-.owl-gal .item {
+:is(.owl-gal, #sync1) .item {
   overflow: hidden;
   cursor: pointer;
 }
 
-.owl-gal .owl-nav button.owl-next,
-.owl-gal .owl-nav button.owl-prev {
+:is(.owl-gal, #sync1) .owl-nav button.owl-next,
+:is(.owl-gal, #sync1) .owl-nav button.owl-prev {
   padding: 10px 17px !important;
   background: rgba(0, 0, 0, 1);
 }
 
-.owl-gal .owl-nav button.owl-prev {
+:is(.owl-gal, #sync1) .owl-nav button.owl-prev {
   margin-left: -8px;
 }
 .owl-theme .owl-nav [class*='owl-']:hover,
@@ -964,5 +982,112 @@ body {
     width: 138px;
     border-top: 1px solid #fff;
     transition: all 0.3s ease-in-out;
+  }
+}
+
+// project-details
+#sync1 {
+  .item {
+    height: 450px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+#sync2 {
+  .owl-carousel .owl-stage {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item {
+    height: 80px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    img {
+      height: 100%;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+  .current .item {
+    opacity: 0.5;
+  }
+}
+
+//arrows on first carousel
+#sync1.owl-theme {
+  position: relative;
+  .owl-next,
+  .owl-prev {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .owl-prev {
+    left: 10px;
+  }
+  .owl-next {
+    right: 0px;
+  }
+}
+#sync2.owl-carousel .owl-nav.disabled {
+  display: none;
+}
+#sync2 .owl-item:not(:last-child) {
+  padding-right: 16px;
+}
+.construction {
+  p {
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+}
+
+.project-title {
+  font-size: 16pt;
+  font-family: $semi-bold;
+  margin-bottom: 15px;
+}
+.details li {
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  line-height: 20pt;
+  strong {
+    font-family: $semi-bold;
+  }
+}
+.project-btn {
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    background-color: #999;
+  }
+  a {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    @extend %transition;
   }
 }

@@ -13,8 +13,6 @@ ol {
 
 a {
   text-decoration: none !important; }
-  a:hover {
-    color: #fff; }
 
 li {
   list-style: none; }
@@ -47,7 +45,7 @@ li {
 html {
   scroll-behavior: smooth; }
 
-.navbar-menu, .nav-list li, .nav-list li .nav-link, .nav-hidden li a, .social-list a, .social-list a::after, .team-wrapper .team-info .team-social li a, .project-img a, .services-list li, .widget .download-brochure .download-link, .pagination-sm .page-item, .page-btn a, .tag-list li a {
+.navbar-menu, .nav-list li, .nav-list li .nav-link, .nav-hidden li a, .social-list a, .social-list a::after, .team-wrapper .team-info .team-social li a, .breadcrumb a, .all-work, .project-img a, .services-list li, .widget .download-brochure .download-link, .pagination-sm .page-item, .page-btn a, .tag-list li a, .tel-num, .project-btn, .project-btn a {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -183,8 +181,12 @@ body {
 .bg-pic-about {
   background-image: url(../img/bg2.jpg); }
 
+.bg-pic-projects {
+  background-image: url(../img/bg3.jpg); }
+
 .bg-pic,
-.bg-pic-about {
+.bg-pic-about,
+.bg-pic-projects {
   width: 100%;
   height: 100%;
   -webkit-background-size: cover;
@@ -444,12 +446,17 @@ body {
   margin-left: 10px;
   margin-right: 10px; }
 
+.breadcrumb-item:not(:last-child):hover a {
+  color: #ff6600; }
+
 .all-work {
   color: #fff;
   font-size: 14px;
   text-align: right;
   display: block;
   padding: 60px 0 30px; }
+  .all-work:hover {
+    color: #ff6600; }
 
 .project-img {
   overflow: hidden; }
@@ -796,6 +803,8 @@ body {
 
 .tel-num {
   color: #464646; }
+  .tel-num:hover {
+    color: #ff6600; }
 
 .contact {
   margin-top: 60px; }
@@ -984,16 +993,16 @@ body {
     width: 100%;
     top: 40%; }
 
-.owl-gal .item {
+:is(.owl-gal, #sync1) .item {
   overflow: hidden;
   cursor: pointer; }
 
-.owl-gal .owl-nav button.owl-next,
-.owl-gal .owl-nav button.owl-prev {
+:is(.owl-gal, #sync1) .owl-nav button.owl-next,
+:is(.owl-gal, #sync1) .owl-nav button.owl-prev {
   padding: 10px 17px !important;
   background: black; }
 
-.owl-gal .owl-nav button.owl-prev {
+:is(.owl-gal, #sync1) .owl-nav button.owl-prev {
   margin-left: -8px; }
 
 .owl-theme .owl-nav [class*='owl-']:hover,
@@ -1054,3 +1063,107 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+
+#sync1 .item {
+  height: 450px;
+  width: 100%; }
+  #sync1 .item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+    #sync1 .item img:hover {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+
+#sync2 .owl-carousel .owl-stage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+#sync2 .item {
+  height: 80px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px; }
+  #sync2 .item img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+    #sync2 .item img:hover {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+
+#sync2 .current .item {
+  opacity: 0.5; }
+
+#sync1.owl-theme {
+  position: relative; }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  #sync1.owl-theme .owl-prev {
+    left: 10px; }
+  #sync1.owl-theme .owl-next {
+    right: 0px; }
+
+#sync2.owl-carousel .owl-nav.disabled {
+  display: none; }
+
+#sync2 .owl-item:not(:last-child) {
+  padding-right: 16px; }
+
+.construction p {
+  font-size: 13px;
+  letter-spacing: 0.7px;
+  line-height: 23px;
+  margin-bottom: 20px; }
+
+.project-title {
+  font-size: 16pt;
+  font-family: "Montserrat-SemiBold";
+  margin-bottom: 15px; }
+
+.details li {
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  line-height: 20pt; }
+  .details li strong {
+    font-family: "Montserrat-SemiBold"; }
+
+.project-btn {
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer; }
+  .project-btn:hover {
+    background-color: #999; }
+  .project-btn a {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px; }

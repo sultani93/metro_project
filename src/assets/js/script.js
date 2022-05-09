@@ -40,17 +40,6 @@ window.onscroll = function () {
   }
 }
 
-// $(function () {
-//   $('.page-pic-change').owlCarousel({
-//     nav: true,
-//     dots: false,
-//     loop: true,
-//     items: 1,
-//     slideSpeed: 1200,
-//     paginationSpeed: 1000,
-//     smartSpeed: 1200,
-//   })
-// })
 // FancyBox
 $('[data-fancybox]').fancybox({
   buttons: ['zoom', 'fullScreen', 'close'],
@@ -58,12 +47,30 @@ $('[data-fancybox]').fancybox({
 
 let open = document.getElementById('open')
 let menu = document.getElementById('open-menu')
+let close = document.getElementById('close-menu')
 
 open.addEventListener('click', function onClick() {
   menu.style.display = 'block'
   open.style.display = 'none'
 })
-menu.addEventListener('click', function onClick() {
+close.addEventListener('click', function onClick() {
   menu.style.display = 'none'
   open.style.display = 'block'
+})
+
+// owl nav bottom
+const prevIcon = '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>'
+const nextIcon = '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+$(function () {
+  $('.owl-gal').owlCarousel({
+    nav: true,
+    dots: false,
+    loop: true,
+    margin: 8,
+    items: 4,
+    slideSpeed: 1200,
+    paginationSpeed: 1000,
+    smartSpeed: 1200,
+    navText: [prevIcon, nextIcon],
+  })
 })

@@ -934,13 +934,14 @@ body {
   -webkit-border-radius: 50px;
   border-radius: 50px;
   cursor: pointer;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: block; }
   #open i {
     font-size: 14px;
     font-weight: lighter; }
 
 .open-menu {
-  display: block;
+  display: none;
   position: fixed;
   width: 100%;
   height: 325px;
@@ -952,7 +953,8 @@ body {
 .close-button {
   cursor: pointer;
   text-align: center;
-  margin-top: 5px; }
+  margin-top: 5px;
+  margin-bottom: 10px; }
 
 .owl-gal {
   display: -webkit-box;
@@ -966,4 +968,89 @@ body {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  position: relative;
+  padding: 0 8px; }
+  .owl-gal .owl-nav {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    top: 40%; }
+
+.owl-gal .item {
+  overflow: hidden;
+  cursor: pointer; }
+
+.owl-gal .owl-nav button.owl-next,
+.owl-gal .owl-nav button.owl-prev {
+  padding: 10px 17px !important;
+  background: black; }
+
+.owl-gal .owl-nav button.owl-prev {
+  margin-left: -8px; }
+
+.owl-theme .owl-nav [class*='owl-']:hover,
+.owl-theme .owl-nav [class*='owl-']:focus {
+  background: black;
+  outline: none; }
+
+.item img {
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
+.item .overlay {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 27, 42, 0.4);
+  margin: 5%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-align: center; }
+  .item .overlay h3 {
+    font-size: 11pt !important;
+    letter-spacing: 1px;
+    padding: 25% 0 0 0;
+    text-transform: uppercase; }
+  .item .overlay .devider {
+    display: block;
+    margin: 10px auto;
+    width: 188px;
+    border-top: 1px solid #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+
+.item:hover {
+  overflow: hidden; }
+  .item:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+  .item:hover .overlay {
+    bottom: -3%;
+    opacity: 1; }
+  .item:hover .devider {
+    display: block;
+    margin: 10px auto;
+    width: 138px;
+    border-top: 1px solid #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }

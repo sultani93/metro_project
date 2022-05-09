@@ -861,6 +861,7 @@ body {
   border-radius: 50px;
   cursor: pointer;
   margin: 0 auto;
+  display: block;
 
   i {
     font-size: 14px;
@@ -868,7 +869,7 @@ body {
   }
 }
 .open-menu {
-  display: block;
+  display: none;
   position: fixed;
   width: 100%;
   height: 325px;
@@ -882,9 +883,86 @@ body {
   cursor: pointer;
   text-align: center;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 .owl-gal {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding: 0 8px;
+  .owl-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 40%;
+  }
+}
+.owl-gal .item {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.owl-gal .owl-nav button.owl-next,
+.owl-gal .owl-nav button.owl-prev {
+  padding: 10px 17px !important;
+  background: rgba(0, 0, 0, 1);
+}
+
+.owl-gal .owl-nav button.owl-prev {
+  margin-left: -8px;
+}
+.owl-theme .owl-nav [class*='owl-']:hover,
+.owl-theme .owl-nav [class*='owl-']:focus {
+  background: rgba(0, 0, 0, 1);
+  outline: none;
+}
+.item img {
+  transition: all 1s ease-in-out;
+}
+.item .overlay {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 27, 42, 0.4);
+  margin: 5%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  h3 {
+    font-size: 11pt !important;
+    letter-spacing: 1px;
+    padding: 25% 0 0 0;
+    text-transform: uppercase;
+  }
+  .devider {
+    display: block;
+    margin: 10px auto;
+    width: 188px;
+    border-top: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.item:hover {
+  overflow: hidden;
+  img {
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+  }
+  .overlay {
+    bottom: -3%;
+    opacity: 1;
+  }
+  .devider {
+    display: block;
+    margin: 10px auto;
+    width: 138px;
+    border-top: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+  }
 }

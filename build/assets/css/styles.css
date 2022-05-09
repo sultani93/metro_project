@@ -909,3 +909,61 @@ body {
 .success-last {
   margin-bottom: 5px;
   margin-left: -18px; }
+
+.nav-bottom {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+  -ms-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+  z-index: 999;
+  -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+#open {
+  color: #efefef;
+  width: 35px;
+  height: 80px;
+  background: #05080a;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0 auto; }
+  #open i {
+    font-size: 14px;
+    font-weight: lighter; }
+
+.open-menu {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 325px;
+  background: rgba(0, 0, 0, 0.95);
+  bottom: 0;
+  left: 0;
+  z-index: 999; }
+
+.close-button {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px; }
+
+.owl-gal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }

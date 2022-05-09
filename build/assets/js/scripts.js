@@ -55,3 +55,15 @@ window.onscroll = function () {
 $('[data-fancybox]').fancybox({
   buttons: ['zoom', 'fullScreen', 'close'],
 })
+
+let open = document.getElementById('open')
+let menu = document.getElementById('open-menu')
+
+open.addEventListener('click', function onClick() {
+  menu.style.display = 'block'
+  open.style.display = 'none'
+})
+menu.addEventListener('click', function onClick() {
+  menu.style.display = 'none'
+  open.style.display = 'block'
+})

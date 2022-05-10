@@ -171,3 +171,73 @@ function test(elem) {
 }
 
 test($('.main-text:first'))
+
+// Change whole bg of page
+const leftChevron = '<i class="fa fa-chevron-left" aria-hidden="true"></i>'
+const rightChevron = '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+$(function () {
+  $('.site-slider').owlCarousel({
+    loop: true,
+    auto: true,
+    dots: false,
+    mouseDrag: true,
+    autoplay: false,
+    items: 1,
+    nav: true,
+    navText: [leftChevron, rightChevron],
+    onTranslated: function () {
+      var $slideHeading = $('.site-slider .owl-item.active .slider-text h1')
+      var $slidePara = $(
+        '.site-slider .owl-item.active .slider-text h3, .site-slider .owl-item.active .slider-text .animation-btn'
+      )
+
+      $slideHeading.addClass('animate-in-fast').on('animationend', function () {
+        $slideHeading.removeClass('animate-in-fast').addClass('opacFull')
+      })
+
+      $slidePara.addClass('animate-in-slow').on('animationend', function () {
+        $slidePara.removeClass('animate-in-slow').addClass('opacFull')
+      })
+    },
+    onChange: function () {
+      var $slideHeading = $('.site-slider .owl-item.active .slider-text h1')
+      var $slidePara = $(
+        '.site-slider .owl-item.active .slider-text h3, .site-slider .owl-item.active .slider-text a'
+      )
+      $slideHeading.removeClass('opacFull')
+      $slidePara.removeClass('opacFull')
+    },
+  })
+})
+
+$(window).on('load', function () {
+  var $slideHeading = $('.site-slider .owl-item.active .slider-text h1')
+  var $slidePara = $(
+    '.site-slider .owl-item.active .slider-text h3, .site-slider .owl-item.active .slider-text .animation-btn'
+  )
+
+  $slideHeading.addClass('animate-in-fast').on('animationend', function () {
+    $slideHeading.removeClass('animate-in-fast').addClass('opacFull')
+  })
+
+  $slidePara.addClass('animate-in-slow').on('animationend', function () {
+    $slidePara.removeClass('animate-in-slow').addClass('opacFull')
+  })
+})
+// arrow bounce
+var arrowBounce = function () {
+  var arrow = $('.arrow')
+
+  if (arrow.hasClass('lift')) {
+    arrow.removeClass('lift')
+  } else {
+    arrow.addClass('lift')
+  }
+}
+setInterval(arrowBounce, 600)
+
+// Hamburger Menu
+const navMenu = document.querySelector('#navMenu')
+navMenu.addEventListener('click', () => {
+  navMenu.classList.toggle('active')
+})

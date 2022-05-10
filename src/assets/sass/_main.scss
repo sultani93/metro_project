@@ -878,19 +878,23 @@ body {
   background: #05080a;
   border-radius: 50px;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 4px auto 0;
   display: block;
-
   i {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: lighter;
+    transition: all 750ms ease-in-out;
   }
 }
+.lift {
+  transform: translateY(3px);
+}
+
 .open-menu {
   display: none;
   position: fixed;
   width: 100%;
-  height: 325px;
+  height: 300px;
   background: rgba(0, 0, 0, 0.95);
   bottom: 0;
   left: 0;
@@ -903,7 +907,8 @@ body {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-.owl-gal {
+.owl-gal,
+.site-slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1090,4 +1095,165 @@ body {
     letter-spacing: 1px;
     @extend %transition;
   }
+}
+
+.opacFull {
+  opacity: 1 !important;
+}
+
+.site-slider {
+  position: relative;
+}
+.slider-img {
+  width: 100%;
+  height: 100vh;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  line-height: normal;
+  color: #fff;
+  transform: translateY(-50%);
+}
+.slider-text h1 {
+  font-size: 53px;
+  color: #fff;
+  opacity: 0;
+}
+.slider-text h3 {
+  font-size: 40px;
+  opacity: 0;
+  visibility: visible;
+}
+
+.animate-in-fast {
+  animation: in-fast 1000ms ease-in-out forwards;
+}
+
+@keyframes in-fast {
+  0% {
+    opacity: 0;
+    transform: translateX(-3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-in-slow {
+  animation: in-slow 1000ms linear forwards;
+}
+
+@keyframes in-slow {
+  0% {
+    opacity: 0;
+    transform: translateX(3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.more-detail {
+  display: block;
+  width: 198px;
+  height: 40px;
+  font-size: 11pt;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 36px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(23, 36, 52, 0);
+  outline: none;
+  text-shadow: none;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #111111;
+    background: #fff;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+  }
+}
+.animation-btn {
+  font-size: 14px;
+  border-width: 1px;
+  line-height: 36px;
+  opacity: 0;
+  margin-top: 48px;
+}
+.site-slider {
+  padding: 0;
+}
+.site-slider.owl-carousel .owl-nav button.owl-prev,
+.site-slider.owl-carousel .owl-nav button.owl-next {
+  color: $white;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    font-size: 24px;
+  }
+  &:hover {
+    background: none;
+  }
+}
+.site-slider.owl-carousel .owl-nav button.owl-prev {
+  margin-left: 15px;
+}
+.site-slider.owl-carousel .owl-nav button.owl-next {
+  margin-right: 15px;
+}
+// Hamburger Menu
+
+#navMenu {
+  cursor: pointer;
+  display: none;
+  margin-right: 24px;
+  transition: 0.3s;
+}
+#navMenu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: $white;
+}
+#navMenu > span:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+#navMenu,
+#navMenu > span {
+  transition: all 0.4s ease-in-out;
+}
+#navMenu.active {
+  transition-delay: 0.8s;
+  transform: rotate(45deg);
+}
+#navMenu.active > span:nth-child(2) {
+  width: 0;
+}
+#navMenu.active > span:nth-child(1),
+#navMenu.active > span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+#navMenu.active > span:nth-child(1) {
+  transform: translateY(7px);
+}
+
+#navMenu.active > span:nth-child(3) {
+  transform: translateY(-9px) rotate(90deg);
 }

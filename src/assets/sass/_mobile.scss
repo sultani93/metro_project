@@ -1,0 +1,46 @@
+@media screen and (max-width: 1200px) {
+  .nav-list li .nav-link {
+    padding-right: 10px;
+  }
+  .dream {
+    font-size: 64px;
+  }
+  .main-text {
+    font-size: 36px;
+  }
+  .open-menu {
+    height: 20vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav-list {
+    display: none;
+  }
+  #navMenu {
+    display: block;
+  }
+  .header-flex {
+    height: 64px;
+  }
+  .logo {
+    height: 42px;
+  }
+  .close-button {
+    margin-bottom: 5px;
+  }
+  .dream {
+    font-size: 48px;
+  }
+  .main-text {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dream {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 320px) {
+}

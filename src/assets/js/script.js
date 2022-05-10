@@ -72,6 +72,10 @@ $(function () {
     paginationSpeed: 1000,
     smartSpeed: 1200,
     navText: [prevIcon, nextIcon],
+    responsive: {
+      992: { items: 4 },
+      576: { items: 3 },
+    },
   })
 })
 // project details

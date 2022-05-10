@@ -155,3 +155,19 @@ $(document).ready(function () {
     sync1.data('owl.carousel').to(number, 300, true)
   })
 })
+//  fade in fade out element in same location
+$('.main-text').hide()
+
+function test(elem) {
+  elem.fadeIn(2000, function () {
+    elem.fadeOut(1000, function () {
+      test(
+        elem.next('.main-text').length
+          ? elem.next('.main-text')
+          : $('.main-text:first')
+      )
+    })
+  })
+}
+
+test($('.main-text:first'))

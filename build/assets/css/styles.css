@@ -1097,7 +1097,9 @@ body {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-    object-fit: cover; }
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center; }
     #sync1 .item img:hover {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -1158,9 +1160,6 @@ body {
 
 #sync2.owl-carousel .owl-nav.disabled {
   display: none; }
-
-#sync2 .owl-item:not(:last-child) {
-  padding-right: 16px; }
 
 .construction p {
   font-size: 13px;
@@ -1452,7 +1451,9 @@ body {
   .col-lg-9 .space-double {
     height: 40px; }
   .project-img a {
-    height: 30vw; } }
+    height: 30vw; }
+  #sync1 .item {
+    height: 40vw; } }
 
 @media screen and (max-width: 768px) {
   .dream {
@@ -1500,7 +1501,9 @@ body {
   .project-img a {
     height: 45vw; }
   .project-img .overlay h3 {
-    padding-top: 24%; } }
+    padding-top: 24%; }
+  #sync1 .item {
+    height: 45vw; } }
 
 @media screen and (max-width: 576px) {
   .logo {
@@ -1527,7 +1530,11 @@ body {
   .inovative .desktop-icon i {
     font-size: 56px; }
   .breadcrumb a {
-    font-size: 13px; } }
+    font-size: 13px; }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 35px;
+    height: 35px; } }
 
 @media screen and (max-width: 480px) {
   .logo {
@@ -1567,7 +1574,14 @@ body {
       margin: 0 4px;
       padding: 0; }
   .project-img .overlay h3 {
-    padding-top: 30%; } }
+    padding-top: 30%; }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 24px;
+    height: 24px; }
+  :is(.owl-gal, #sync1) .owl-nav button.owl-next,
+  :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
+    padding: 16px !important; } }
 
 @media screen and (max-width: 320px) and (min-width: 280px) {
   #navMenu > span {
@@ -1600,4 +1614,18 @@ body {
   .row-gap {
     margin-top: 24px; }
   .project-img .overlay h3 {
-    padding-top: 36%; } }
+    padding-top: 36%; }
+  :is(.owl-gal, #sync1) .owl-nav button.owl-next,
+  :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
+    padding: 12px !important; }
+  :is(.owl-gal, #sync1) .owl-nav button i {
+    font-size: 12px; }
+  #sync2.owl-theme .owl-nav.disabled + .owl-dots {
+    margin: 0; }
+  .project-title {
+    font-size: 18px; }
+  .construction p {
+    letter-spacing: 0.5px;
+    line-height: 21px; }
+  #sync1 .item {
+    height: 50vw; } }

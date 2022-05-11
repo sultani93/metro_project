@@ -58,6 +58,9 @@
   .project-img a {
     height: 30vw;
   }
+  #sync1 .item {
+    height: 40vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .dream {
@@ -121,6 +124,9 @@
   .project-img .overlay h3 {
     padding-top: 24%;
   }
+  #sync1 .item {
+    height: 45vw;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -159,6 +165,11 @@
   }
   .breadcrumb a {
     font-size: 13px;
+  }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 35px;
+    height: 35px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -217,6 +228,15 @@
   .project-img .overlay h3 {
     padding-top: 30%;
   }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 24px;
+    height: 24px;
+  }
+  :is(.owl-gal, #sync1) .owl-nav button.owl-next,
+  :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
+    padding: 16px !important;
+  }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {
   #navMenu > span {
@@ -266,5 +286,25 @@
   }
   .project-img .overlay h3 {
     padding-top: 36%;
+  }
+  :is(.owl-gal, #sync1) .owl-nav button.owl-next,
+  :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
+    padding: 12px !important;
+  }
+  :is(.owl-gal, #sync1) .owl-nav button i {
+    font-size: 12px;
+  }
+  #sync2.owl-theme .owl-nav.disabled + .owl-dots {
+    margin: 0;
+  }
+  .project-title {
+    font-size: 18px;
+  }
+  .construction p {
+    letter-spacing: 0.5px;
+    line-height: 21px;
+  }
+  #sync1 .item {
+    height: 50vw;
   }
 }

@@ -1010,6 +1010,7 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top center;
       &:hover {
         transform: scale(1);
       }
@@ -1064,9 +1065,9 @@ body {
 #sync2.owl-carousel .owl-nav.disabled {
   display: none;
 }
-#sync2 .owl-item:not(:last-child) {
-  padding-right: 16px;
-}
+// #sync2 .owl-item:not(:last-child) {
+//   padding-right: 16px;
+// }
 .construction {
   p {
     font-size: 13px;

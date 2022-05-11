@@ -45,6 +45,12 @@
   .main-text {
     font-size: 24px;
   }
+  .space-single {
+    display: none;
+  }
+  .col-lg-9 .space-double {
+    height: 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .dream {
@@ -79,6 +85,26 @@
       object-position: top;
     }
   }
+  .widget {
+    margin-bottom: 0;
+  }
+  .circle {
+    display: none;
+  }
+  .success {
+    margin: 0;
+    padding-bottom: 36px;
+    &::before {
+      display: none;
+    }
+  }
+  .success-text {
+    margin: 0;
+  }
+  .success-last {
+    margin: 0;
+    padding-bottom: 36px;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -109,7 +135,7 @@
   .divider {
     width: 160px;
   }
-  .about .space-double {
+  .space-edit {
     height: 20px;
   }
   .inovative .desktop-icon i {
@@ -139,6 +165,10 @@
       font-size: 32px;
       margin-bottom: 8px;
     }
+  }
+  .project-carousel .real img {
+    width: 70px;
+    height: 70px;
   }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {

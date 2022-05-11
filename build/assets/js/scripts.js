@@ -11,6 +11,17 @@ $(function () {
     slideSpeed: 1200,
     paginationSpeed: 1000,
     smartSpeed: 1200,
+    responsive: {
+      768: {
+        items: 4,
+      },
+      576: {
+        items: 4,
+      },
+      280: {
+        items: 3,
+      },
+    },
   })
 })
 // MAP

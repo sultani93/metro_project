@@ -17,6 +17,9 @@
   .about-sections {
     padding-bottom: 24px;
   }
+  .services-list li a {
+    padding-left: 10px;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .about,
@@ -60,6 +63,15 @@
   }
   #sync1 .item {
     height: 40vw;
+  }
+  .col-lg-4 .blog-left:first-child {
+    margin-top: 24px;
+  }
+  .blog-left {
+    margin-bottom: 30px;
+    h5::after {
+      margin-top: 24px;
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -118,13 +130,12 @@
   .all-work {
     display: none;
   }
-  .project-img a {
-    height: 45vw;
-  }
   .project-img .overlay h3 {
     padding-top: 24%;
   }
-  #sync1 .item {
+  #sync1 .item,
+  .services-img,
+  .project-img a {
     height: 45vw;
   }
 }
@@ -158,7 +169,7 @@
     width: 160px;
   }
   .space-edit {
-    height: 20px;
+    height: 24px;
   }
   .inovative .desktop-icon i {
     font-size: 56px;
@@ -170,6 +181,9 @@
   #sync1.owl-theme .owl-prev {
     width: 35px;
     height: 35px;
+  }
+  .blog-left {
+    margin-bottom: 24px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -209,7 +223,8 @@
   .project-img .overlay h3 {
     letter-spacing: 2px;
   }
-  .project-img a {
+  .project-img a,
+  .services-img {
     height: 50vw;
   }
   .breadcrumb {
@@ -236,6 +251,22 @@
   :is(.owl-gal, #sync1) .owl-nav button.owl-next,
   :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
     padding: 16px !important;
+  }
+  .blog-left {
+    margin-bottom: 16px;
+    h5 {
+      margin-bottom: 16px;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .page-btn {
+    display: none;
+  }
+  .read-more {
+    padding: 10px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {
@@ -275,7 +306,8 @@
   .project-img .overlay h3 {
     letter-spacing: 1px;
   }
-  .project-img a {
+  .project-img a,
+  .services-img {
     height: 60vw;
   }
   .breadcrumb {
@@ -300,11 +332,47 @@
   .project-title {
     font-size: 18px;
   }
-  .construction p {
+  .construction p,
+  .text,
+  .last-text {
     letter-spacing: 0.5px;
     line-height: 21px;
   }
   #sync1 .item {
     height: 50vw;
+  }
+  .main-service {
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      em {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .service-text {
+    padding: 24px;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+  .text {
+    margin-bottom: 16px;
+  }
+  .widget {
+    margin-bottom: 20px;
+    .download-brochure h4 {
+      font-size: 13px !important;
+    }
+  }
+  .services-list li a {
+    padding: 10px;
+    line-height: 20px;
+  }
+  .read-more {
+    font-size: 12px;
+    line-height: 12px;
   }
 }

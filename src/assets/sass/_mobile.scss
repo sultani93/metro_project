@@ -19,8 +19,12 @@
   }
 }
 @media only screen and (max-width: 1024px) {
-  .about {
+  .about,
+  .about-sections {
     padding: 10px;
+  }
+  .breadcrumb {
+    padding: 30px 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -50,6 +54,9 @@
   }
   .col-lg-9 .space-double {
     height: 40px;
+  }
+  .project-img a {
+    height: 30vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -105,6 +112,15 @@
     margin: 0;
     padding-bottom: 36px;
   }
+  .all-work {
+    display: none;
+  }
+  .project-img a {
+    height: 45vw;
+  }
+  .project-img .overlay h3 {
+    padding-top: 24%;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -141,6 +157,9 @@
   .inovative .desktop-icon i {
     font-size: 56px;
   }
+  .breadcrumb a {
+    font-size: 13px;
+  }
 }
 @media screen and (max-width: 480px) {
   .logo {
@@ -159,6 +178,12 @@
   .logo a {
     padding-left: 15px;
   }
+  .section-title {
+    font-size: 36px;
+  }
+  .divider {
+    width: 140px;
+  }
   .inovative {
     padding-top: 10px;
     h4 {
@@ -169,6 +194,28 @@
   .project-carousel .real img {
     width: 70px;
     height: 70px;
+  }
+  .project-img .overlay h3 {
+    letter-spacing: 2px;
+  }
+  .project-img a {
+    height: 50vw;
+  }
+  .breadcrumb {
+    padding: 20px 0;
+  }
+  .breadcrumb a {
+    font-size: 12px;
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding: 0;
+    &::before {
+      margin: 0 4px;
+      padding: 0;
+    }
+  }
+  .project-img .overlay h3 {
+    padding-top: 30%;
   }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {
@@ -194,15 +241,30 @@
     }
   }
   .section-title {
-    font-size: 36px;
+    font-size: 28px;
   }
   .divider {
-    width: 140px;
+    width: 100px;
   }
   .inovative h4 {
     font-size: 26px;
   }
   .inovative .desktop-icon i {
     font-size: 48px;
+  }
+  .project-img .overlay h3 {
+    letter-spacing: 1px;
+  }
+  .project-img a {
+    height: 60vw;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  .row-gap {
+    margin-top: 24px;
+  }
+  .project-img .overlay h3 {
+    padding-top: 36%;
   }
 }

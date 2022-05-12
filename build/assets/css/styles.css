@@ -793,7 +793,7 @@ body {
   line-height: 23px; }
 
 #map {
-  height: 450px;
+  height: 400px;
   padding-top: 0px;
   padding-bottom: 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
@@ -802,7 +802,7 @@ body {
 .contact-info {
   color: #464646;
   background: #fff;
-  height: 450px;
+  height: 400px;
   padding: 25px 20px 25px 40px;
   line-height: 26pt;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
@@ -1199,6 +1199,9 @@ body {
 .site-slider {
   position: relative; }
 
+h1 {
+  margin-bottom: 16px; }
+
 .slider-img {
   width: 100%;
   height: 100vh; }
@@ -1211,7 +1214,6 @@ body {
 .slider-text {
   position: absolute;
   top: 50%;
-  left: 100px;
   line-height: normal;
   color: #fff;
   -webkit-transform: translateY(-50%);
@@ -1466,7 +1468,11 @@ body {
       margin-top: 24px; }
   .contact-info,
   #map {
-    height: 400px; } }
+    height: 400px; }
+  .slider-text h1 {
+    font-size: 42px; }
+  .slider-text h3 {
+    font-size: 36px; } }
 
 @media screen and (max-width: 768px) {
   .dream {
@@ -1523,7 +1529,16 @@ body {
     line-height: 30px; }
   .sent-now {
     width: 150px;
-    line-height: 30px; } }
+    line-height: 30px; }
+  .slider-text h1 {
+    font-size: 32px; }
+  .slider-text h3 {
+    font-size: 28px; }
+  .slider-text .animation-btn {
+    margin-top: 28px; }
+  .slider-text .more-detail {
+    width: 160px;
+    height: 40px; } }
 
 @media screen and (max-width: 576px) {
   .logo {
@@ -1568,7 +1583,27 @@ body {
   .sent-now {
     letter-spacing: 1px;
     width: 130px;
-    padding: 5px; } }
+    padding: 5px; }
+  .slider-text h1 {
+    font-size: 26px; }
+  .slider-text h3 {
+    font-size: 20px; }
+  .slider-text .more-detail {
+    width: 130px;
+    height: 38px;
+    letter-spacing: 0; }
+  .slider-text .animation-btn {
+    margin-top: 16px; }
+  .site-slider .owl-nav {
+    top: 44%; }
+  .site-slider.owl-theme .owl-nav {
+    margin-top: 0; }
+  .site-slider.owl-carousel .owl-nav button.owl-next, .site-slider.owl-carousel .owl-nav button.owl-prev {
+    margin-right: 0;
+    width: 40px;
+    height: 40px; }
+    .site-slider.owl-carousel .owl-nav button.owl-next i, .site-slider.owl-carousel .owl-nav button.owl-prev i {
+      font-size: 16px; } }
 
 @media screen and (max-width: 480px) {
   .logo {
@@ -1577,7 +1612,8 @@ body {
     font-size: 28px;
     letter-spacing: 1px; }
   .main-text {
-    font-size: 20px; }
+    font-size: 20px;
+    margin-bottom: 16px; }
   #navMenu {
     margin-right: 15px; }
   .logo a {
@@ -1627,7 +1663,11 @@ body {
     display: none; }
   .read-more {
     padding: 10px;
-    font-size: 13px; } }
+    font-size: 13px; }
+  .slider-text h1 {
+    font-size: 24px; }
+  .slider-text h3 {
+    font-size: 18px; } }
 
 @media screen and (max-width: 320px) and (min-width: 280px) {
   #navMenu > span {
@@ -1703,4 +1743,9 @@ body {
     line-height: 12px; }
   .sent-now {
     width: 120px;
-    font-size: 12px; } }
+    font-size: 12px; }
+  .slider-text .more-detail {
+    width: 110px;
+    height: 35px; }
+  .more-detail {
+    line-height: 32px; } }

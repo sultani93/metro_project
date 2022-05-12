@@ -730,7 +730,7 @@ body {
   line-height: 23px;
 }
 #map {
-  height: 450px;
+  height: 400px;
   padding-top: 0px;
   padding-bottom: 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
@@ -738,7 +738,7 @@ body {
 .contact-info {
   color: $light-gray;
   background: $white;
-  height: 450px;
+  height: 400px;
   padding: 25px 20px 25px 40px;
   line-height: 26pt;
   box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 2px;
@@ -1116,6 +1116,9 @@ body {
 .site-slider {
   position: relative;
 }
+h1 {
+  margin-bottom: 16px;
+}
 .slider-img {
   width: 100%;
   height: 100vh;
@@ -1130,7 +1133,6 @@ body {
 .slider-text {
   position: absolute;
   top: 50%;
-  left: 100px;
   line-height: normal;
   color: #fff;
   transform: translateY(-50%);

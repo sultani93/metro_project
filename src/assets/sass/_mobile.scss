@@ -80,6 +80,14 @@
   #map {
     height: 400px;
   }
+  .slider-text {
+    h1 {
+      font-size: 42px;
+    }
+    h3 {
+      font-size: 36px;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .dream {
@@ -154,6 +162,21 @@
     width: 150px;
     line-height: 30px;
   }
+  .slider-text {
+    h1 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    .animation-btn {
+      margin-top: 28px;
+    }
+    .more-detail {
+      width: 160px;
+      height: 40px;
+    }
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -217,6 +240,39 @@
     width: 130px;
     padding: 5px;
   }
+  .slider-text {
+    h1 {
+      font-size: 26px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    .more-detail {
+      width: 130px;
+      height: 38px;
+      letter-spacing: 0;
+    }
+    .animation-btn {
+      margin-top: 16px;
+    }
+  }
+  .site-slider .owl-nav {
+    top: 44%;
+  }
+  .site-slider.owl-theme .owl-nav {
+    margin-top: 0;
+  }
+  .site-slider.owl-carousel .owl-nav button {
+    &.owl-next,
+    &.owl-prev {
+      margin-right: 0;
+      width: 40px;
+      height: 40px;
+      i {
+        font-size: 16px;
+      }
+    }
+  }
 }
 @media screen and (max-width: 480px) {
   .logo {
@@ -228,6 +284,7 @@
   }
   .main-text {
     font-size: 20px;
+    margin-bottom: 16px;
   }
   #navMenu {
     margin-right: 15px;
@@ -299,6 +356,14 @@
   .read-more {
     padding: 10px;
     font-size: 13px;
+  }
+  .slider-text {
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+    }
   }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {
@@ -410,5 +475,12 @@
   .sent-now {
     width: 120px;
     font-size: 12px;
+  }
+  .slider-text .more-detail {
+    width: 110px;
+    height: 35px;
+  }
+  .more-detail {
+    line-height: 32px;
   }
 }

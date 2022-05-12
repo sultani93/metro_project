@@ -78,14 +78,15 @@ $(function () {
     dots: false,
     loop: true,
     margin: 8,
-    items: 4,
     slideSpeed: 1200,
     paginationSpeed: 1000,
     smartSpeed: 1200,
     navText: [prevIcon, nextIcon],
     responsive: {
+      1200: { items: 5 },
       992: { items: 4 },
       576: { items: 3 },
+      320: { items: 2 },
     },
   })
 })

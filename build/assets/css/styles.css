@@ -1412,6 +1412,10 @@ h1 {
 .row-gap {
   row-gap: 24px; }
 
+@media screen and (min-width: 1200px) {
+  .item img {
+    height: 240px; } }
+
 @media screen and (max-width: 1200px) {
   .nav-list li .nav-link {
     padding-right: 10px; }
@@ -1420,7 +1424,9 @@ h1 {
   .main-text {
     font-size: 36px; }
   .open-menu {
-    height: 20vw; }
+    height: 250px; }
+  .item img {
+    height: 200px; }
   .inovative {
     padding: 15px 5px; }
   .about-sections {
@@ -1428,7 +1434,9 @@ h1 {
   .services-list li a {
     padding-left: 10px; }
   .contact-info {
-    padding-left: 20px; } }
+    padding-left: 20px; }
+  .owl-gal .owl-nav {
+    top: 28%; } }
 
 @media only screen and (max-width: 1024px) {
   .about,
@@ -1472,11 +1480,17 @@ h1 {
   .slider-text h1 {
     font-size: 42px; }
   .slider-text h3 {
-    font-size: 36px; } }
+    font-size: 36px; }
+  .owl-gal .owl-nav button.owl-prev {
+    padding: 8px 14px !important; } }
 
 @media screen and (max-width: 768px) {
   .dream {
     font-size: 36px; }
+  .open-menu {
+    height: 200px; }
+  .item img {
+    height: 150px; }
   #navMenu > span {
     width: 22px; }
   .site-slider.owl-carousel .owl-nav button.owl-prev {
@@ -1538,19 +1552,28 @@ h1 {
     margin-top: 28px; }
   .slider-text .more-detail {
     width: 160px;
-    height: 40px; } }
+    height: 40px; }
+  :is(.owl-gal, #sync1) .owl-nav button.owl-next,
+  :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
+    padding: 6px 12px !important; } }
 
 @media screen and (max-width: 576px) {
   .logo {
     height: 36px; }
-  #open i {
-    font-size: 14px; }
-  .nav-bottom {
-    display: none; }
+  #open {
+    height: 34px;
+    width: 34px;
+    margin-top: -2px; }
+    #open i {
+      font-size: 13px; }
+  .social-list a {
+    padding: 14px 8px 10px; }
   .footer-menu .footer-equal-parts:not(:last-child) {
     display: none; }
   .footer-equal-parts {
     margin: 0 auto; }
+  .nav-bottom {
+    margin-bottom: 60px; }
   .sections-center {
     padding-left: 16px;
     padding-right: 16px; }
@@ -1603,7 +1626,11 @@ h1 {
     width: 40px;
     height: 40px; }
     .site-slider.owl-carousel .owl-nav button.owl-next i, .site-slider.owl-carousel .owl-nav button.owl-prev i {
-      font-size: 16px; } }
+      font-size: 16px; }
+  .open-menu {
+    height: 150px; }
+  .item img {
+    height: 110px; } }
 
 @media screen and (max-width: 480px) {
   .logo {
@@ -1646,13 +1673,11 @@ h1 {
       padding: 0; }
   .project-img .overlay h3 {
     padding-top: 30%; }
-  #sync1.owl-theme .owl-next,
-  #sync1.owl-theme .owl-prev {
-    width: 24px;
-    height: 24px; }
   :is(.owl-gal, #sync1) .owl-nav button.owl-next,
   :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
-    padding: 16px !important; }
+    padding: 6px !important;
+    width: 32px;
+    height: 34px; }
   .blog-left {
     margin-bottom: 16px; }
     .blog-left h5 {
@@ -1667,7 +1692,11 @@ h1 {
   .slider-text h1 {
     font-size: 24px; }
   .slider-text h3 {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .owl-gal .owl-nav button.owl-next {
+    margin-right: 20px; }
+  .owl-gal .owl-nav button.owl-prev {
+    margin-left: 4px !important; } }
 
 @media screen and (max-width: 320px) and (min-width: 280px) {
   #navMenu > span {
@@ -1675,6 +1704,8 @@ h1 {
   .dream {
     font-size: 22px;
     letter-spacing: 0.5px; }
+  .nav-bottom {
+    display: none; }
   .main-text {
     font-size: 16px; }
   .home-text {
@@ -1748,4 +1779,13 @@ h1 {
     width: 110px;
     height: 35px; }
   .more-detail {
-    line-height: 32px; } }
+    line-height: 32px; }
+  .social-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .social-list a {
+      margin: 0 8px; }
+  .footer-equal-parts {
+    width: 100%; } }

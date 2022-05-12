@@ -1,3 +1,8 @@
+@media screen and (min-width: 1200px) {
+  .item img {
+    height: 240px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .nav-list li .nav-link {
     padding-right: 10px;
@@ -9,7 +14,10 @@
     font-size: 36px;
   }
   .open-menu {
-    height: 20vw;
+    height: 250px;
+  }
+  .item img {
+    height: 200px;
   }
   .inovative {
     padding: 15px 5px;
@@ -22,6 +30,9 @@
   }
   .contact-info {
     padding-left: 20px;
+  }
+  .owl-gal .owl-nav {
+    top: 28%;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -88,10 +99,19 @@
       font-size: 36px;
     }
   }
+  .owl-gal .owl-nav button.owl-prev {
+    padding: 8px 14px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .dream {
     font-size: 36px;
+  }
+  .open-menu {
+    height: 200px;
+  }
+  .item img {
+    height: 150px;
   }
   #navMenu > span {
     width: 22px;
@@ -177,22 +197,34 @@
       height: 40px;
     }
   }
+  :is(.owl-gal, #sync1) .owl-nav button.owl-next,
+  :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
+    padding: 6px 12px !important;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
     height: 36px;
   }
-  #open i {
-    font-size: 14px;
+  #open {
+    height: 34px;
+    width: 34px;
+    margin-top: -2px;
+    i {
+      font-size: 13px;
+    }
   }
-  .nav-bottom {
-    display: none;
+  .social-list a {
+    padding: 14px 8px 10px;
   }
   .footer-menu .footer-equal-parts:not(:last-child) {
     display: none;
   }
   .footer-equal-parts {
     margin: 0 auto;
+  }
+  .nav-bottom {
+    margin-bottom: 60px;
   }
   .sections-center {
     padding-left: 16px;
@@ -273,6 +305,12 @@
       }
     }
   }
+  .open-menu {
+    height: 150px;
+  }
+  .item img {
+    height: 110px;
+  }
 }
 @media screen and (max-width: 480px) {
   .logo {
@@ -332,14 +370,12 @@
   .project-img .overlay h3 {
     padding-top: 30%;
   }
-  #sync1.owl-theme .owl-next,
-  #sync1.owl-theme .owl-prev {
-    width: 24px;
-    height: 24px;
-  }
+
   :is(.owl-gal, #sync1) .owl-nav button.owl-next,
   :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
-    padding: 16px !important;
+    padding: 6px !important;
+    width: 32px;
+    height: 34px;
   }
   .blog-left {
     margin-bottom: 16px;
@@ -365,6 +401,12 @@
       font-size: 18px;
     }
   }
+  .owl-gal .owl-nav button.owl-next {
+    margin-right: 20px;
+  }
+  .owl-gal .owl-nav button.owl-prev {
+    margin-left: 4px !important;
+  }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {
   #navMenu > span {
@@ -373,6 +415,9 @@
   .dream {
     font-size: 22px;
     letter-spacing: 0.5px;
+  }
+  .nav-bottom {
+    display: none;
   }
   .main-text {
     font-size: 16px;
@@ -482,5 +527,14 @@
   }
   .more-detail {
     line-height: 32px;
+  }
+  .social-list {
+    justify-content: center;
+    a {
+      margin: 0 8px;
+    }
+  }
+  .footer-equal-parts {
+    width: 100%;
   }
 }

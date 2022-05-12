@@ -20,6 +20,9 @@
   .services-list li a {
     padding-left: 10px;
   }
+  .contact-info {
+    padding-left: 20px;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .about,
@@ -72,6 +75,10 @@
     h5::after {
       margin-top: 24px;
     }
+  }
+  .contact-info,
+  #map {
+    height: 400px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -138,6 +145,15 @@
   .project-img a {
     height: 45vw;
   }
+  .contact-info,
+  #map {
+    height: 350px;
+    line-height: 30px;
+  }
+  .sent-now {
+    width: 150px;
+    line-height: 30px;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -184,6 +200,22 @@
   }
   .blog-left {
     margin-bottom: 24px;
+  }
+  .contact-info,
+  #map {
+    height: 300px;
+  }
+  .contact-info {
+    padding: 16px;
+    line-height: 28px;
+  }
+  .address .mb-3 {
+    margin-bottom: 8px !important;
+  }
+  .sent-now {
+    letter-spacing: 1px;
+    width: 130px;
+    padding: 5px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -374,5 +406,9 @@
   .read-more {
     font-size: 12px;
     line-height: 12px;
+  }
+  .sent-now {
+    width: 120px;
+    font-size: 12px;
   }
 }

@@ -684,6 +684,8 @@ body {
   .read-more:hover {
     background-color: #ff6600;
     border: 1px solid rgba(255, 255, 255, 0); }
+  .read-more:focus {
+    outline: none; }
 
 .page-num {
   margin-right: 15px;
@@ -711,6 +713,10 @@ body {
   border-radius: 0 !important;
   font-size: 13px;
   line-height: 16px; }
+  .pagination-sm .page-item .page-link:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .pagination-sm .page-item {
   margin-right: 4px; }

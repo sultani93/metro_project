@@ -624,6 +624,9 @@ body {
     background-color: $orange;
     border: 1px solid rgba(255, 255, 255, 0);
   }
+  &:focus {
+    outline: none;
+  }
 }
 .page-num {
   margin-right: 15px;
@@ -647,6 +650,10 @@ body {
   border-radius: 0 !important;
   font-size: 13px;
   line-height: 16px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 .pagination-sm .page-item {
   @extend %transition;

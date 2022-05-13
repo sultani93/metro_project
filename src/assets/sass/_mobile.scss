@@ -104,6 +104,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .logo {
+    height: 36px;
+  }
   .dream {
     font-size: 36px;
   }
@@ -203,9 +206,6 @@
   }
 }
 @media screen and (max-width: 576px) {
-  .logo {
-    height: 36px;
-  }
   #open {
     height: 34px;
     width: 34px;
@@ -311,6 +311,9 @@
   .item img {
     height: 110px;
   }
+  .close-button {
+    margin-bottom: 2px;
+  }
 }
 @media screen and (max-width: 480px) {
   .logo {
@@ -373,9 +376,9 @@
 
   :is(.owl-gal, #sync1) .owl-nav button.owl-next,
   :is(.owl-gal, #sync1) .owl-nav button.owl-prev {
-    padding: 6px !important;
-    width: 32px;
-    height: 34px;
+    padding: 4px !important;
+    width: 30px;
+    height: 30px;
   }
   .blog-left {
     margin-bottom: 16px;
@@ -407,6 +410,21 @@
   .owl-gal .owl-nav button.owl-prev {
     margin-left: 4px !important;
   }
+  .owl-gal .owl-nav {
+    top: 22%;
+  }
+  .sidebar .nav-links li {
+    max-width: 180px;
+    a .link_name {
+      font-size: 16px;
+    }
+  }
+  .sidebar .nav-links li i {
+    font-size: 16px;
+  }
+  #navMenu > span {
+    width: 20px;
+  }
 }
 @media screen and (max-width: 320px) and (min-width: 280px) {
   #navMenu > span {
@@ -416,7 +434,8 @@
     font-size: 22px;
     letter-spacing: 0.5px;
   }
-  .nav-bottom {
+  .nav-bottom,
+  .open-menu {
     display: none;
   }
   .main-text {
@@ -536,5 +555,8 @@
   }
   .footer-equal-parts {
     width: 100%;
+  }
+  #navMenu > span {
+    width: 16px;
   }
 }

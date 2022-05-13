@@ -257,7 +257,7 @@ $(window).on('load', function () {
 })
 // arrow bounce
 var arrowBounce = function () {
-  var arrow = $('.arrow')
+  var arrow = $('.arrow-bottom')
 
   if (arrow.hasClass('lift')) {
     arrow.removeClass('lift')
@@ -269,6 +269,16 @@ setInterval(arrowBounce, 600)
 
 // Hamburger Menu
 const navMenu = document.querySelector('#navMenu')
+let navTop = document.querySelector('.navbar-menu-top')
 navMenu.addEventListener('click', () => {
   navMenu.classList.toggle('active')
+  navTop.classList.toggle('nav-active')
 })
+// side bar menu
+let arrow = document.querySelectorAll('.arrow')
+for (var i = 0; i < arrow.length; i++) {
+  arrow[i].addEventListener('click', (e) => {
+    let arrowParent = e.target.parentElement.parentElement //selecting main parent of arrow
+    arrowParent.classList.toggle('showMenu')
+  })
+}

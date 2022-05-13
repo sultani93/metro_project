@@ -221,6 +221,7 @@ $(function () {
       var $slidePara = $(
         '.site-slider .owl-item.active .slider-text h3, .site-slider .owl-item.active .slider-text .animation-btn'
       )
+
       $slideHeading.addClass('animate-in-fast').on('animationend', function () {
         $slideHeading.removeClass('animate-in-fast').addClass('opacFull')
       })
@@ -264,7 +265,6 @@ let arrowBounce = function () {
     arrow.addClass('lift')
   }
 }
-setInterval(arrowBounce, 800)
 
 // Hamburger Menu
 const navMenu = document.querySelector('#navMenu')

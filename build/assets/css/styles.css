@@ -47,7 +47,7 @@ li {
 html {
   scroll-behavior: smooth; }
 
-a, .navbar-menu, .nav-list li, .nav-list li .nav-link, .nav-hidden li a, .social-list a, .social-list a::after, .team-wrapper .team-info .team-social li a, .breadcrumb a, .all-work, .project-img a, .services-list li, .widget .download-brochure .download-link, .pagination-sm .page-item, .page-btn a, .tag-list li a, .tel-num, .project-btn, .project-btn a, .navbar-menu-top, .nav-active {
+a, .navbar-menu, .nav-list li, .nav-list li .nav-link, .nav-hidden li a, .social-list a, .social-list a::after, .team-wrapper .team-info .team-social li a, .breadcrumb a, .all-work, .project-img a, .services-list li, .widget .download-brochure .download-link, .pagination-sm .page-item, .page-btn a, .tag-list li a, .tel-num, .open-menu, .project-btn, .project-btn a, .navbar-menu-top, .nav-active {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -1696,8 +1696,6 @@ h1 {
     font-size: 40px; }
   .divider {
     width: 160px; }
-  .space-edit {
-    height: 24px; }
   .inovative .desktop-icon i {
     font-size: 56px; }
   .breadcrumb a {

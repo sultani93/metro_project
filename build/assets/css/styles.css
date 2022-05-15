@@ -1477,7 +1477,7 @@ h1 {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-.sidebar .nav-links li.showMenu i.arrow {
+.sidebar .nav-links li.showMenu i.arrow-nav {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg); }
@@ -1530,6 +1530,30 @@ h1 {
   padding: 3px 20px 6px 16px;
   opacity: 0;
   pointer-events: none; }
+
+.preloader {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #171616;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  width: 100%;
+  z-index: 9999; }
 
 @media screen and (min-width: 1200px) {
   .item img {

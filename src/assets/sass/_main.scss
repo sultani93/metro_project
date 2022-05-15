@@ -1340,7 +1340,7 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.sidebar .nav-links li.showMenu i.arrow {
+.sidebar .nav-links li.showMenu i.arrow-nav {
   transform: rotate(-180deg);
 }
 .sidebar .nav-links li a {
@@ -1382,4 +1382,19 @@ h1 {
   padding: 3px 20px 6px 16px;
   opacity: 0;
   pointer-events: none;
+}
+
+// Preloader
+.preloader {
+  align-items: center;
+  background: rgb(23, 22, 22);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s linear;
+  width: 100%;
+  z-index: 9999;
 }

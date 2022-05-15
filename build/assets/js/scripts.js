@@ -255,16 +255,6 @@ $(window).on('load', function () {
     $slidePara.removeClass('animate-in-slow').addClass('opacFull')
   })
 })
-// arrow bounce
-let arrowBounce = function () {
-  let arrow = $('.arrow-bottom')
-
-  if (arrow.hasClass('lift')) {
-    arrow.removeClass('lift')
-  } else {
-    arrow.addClass('lift')
-  }
-}
 
 // Hamburger Menu
 const navMenu = document.querySelector('#navMenu')
@@ -274,10 +264,36 @@ navMenu.addEventListener('click', () => {
   navTop.classList.toggle('nav-active')
 })
 // side bar menu
-let arrow = document.querySelectorAll('.arrow')
-for (var i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener('click', (e) => {
+let arrowNav = document.querySelectorAll('.arrow-nav')
+for (var i = 0; i < arrowNav.length; i++) {
+  arrowNav[i].addEventListener('click', (e) => {
     let arrowParent = e.target.parentElement.parentElement //selecting main parent of arrow
     arrowParent.classList.toggle('showMenu')
   })
 }
+// Preloader
+// const preloader = document.querySelector('.preloader')
+
+// const fadeEffect = setInterval(() => {
+//   if (!preloader.style.opacity) {
+//     preloader.style.opacity = 1
+//   }
+//   if (preloader.style.opacity > 0) {
+//     preloader.style.opacity -= 0.1
+//   } else {
+//     clearInterval(fadeEffect)
+//   }
+// }, 50)
+
+// window.addEventListener('load', fadeEffect)
+// arrow bounce
+let arrowBounce = function () {
+  let arrow = $('.arrow')
+
+  if (arrow.hasClass('lift')) {
+    arrow.removeClass('lift')
+  } else {
+    arrow.addClass('lift')
+  }
+}
+setInterval(arrowBounce, 500)
